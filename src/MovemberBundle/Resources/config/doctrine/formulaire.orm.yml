@@ -1,0 +1,30 @@
+MovemberBundle\Entity\formulaire:
+    type: entity
+    table: null
+    repositoryClass: MovemberBundle\Repository\formulaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        codepost:
+            type: string
+            length: 255
+        ville:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+movember_movember:
+    resource: "@MovemberBundle/Resources/config/routing/movember.yml"
+    prefix:   /movember
+
+movember_homepage:
+    path:     /
+    defaults: { _controller: MovemberBundle:Default:index }

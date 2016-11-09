@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Movembers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Codepost</th>
+                <th>Ville</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for movember in movembers %}
+            <tr>
+                <td><a href="{{ path('movember_show', { 'id': movember.id }) }}">{{ movember.id }}</a></td>
+                <td>{{ movember.nom }}</td>
+                <td>{{ movember.prenom }}</td>
+                <td>{{ movember.codepost }}</td>
+                <td>{{ movember.ville }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('movember_show', { 'id': movember.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('movember_edit', { 'id': movember.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('movember_new') }}">Create a new movember</a>
+        </li>
+    </ul>
+{% endblock %}

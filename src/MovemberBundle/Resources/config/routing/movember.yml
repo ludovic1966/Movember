@@ -1,0 +1,24 @@
+movember_index:
+    path:     /
+    defaults: { _controller: "MovemberBundle:Movember:index" }
+    methods:  GET
+
+movember_show:
+    path:     /{id}/show
+    defaults: { _controller: "MovemberBundle:Movember:show" }
+    methods:  GET
+
+movember_new:
+    path:     /new
+    defaults: { _controller: "MovemberBundle:Movember:new" }
+    methods:  [GET, POST]
+
+movember_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MovemberBundle:Movember:edit" }
+    methods:  [GET, POST]
+
+movember_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MovemberBundle:Movember:delete" }
+    methods:  DELETE
