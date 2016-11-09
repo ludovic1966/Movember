@@ -1,45 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Movembers list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Codepost</th>
-                <th>Ville</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for movember in movembers %}
-            <tr>
-                <td><a href="{{ path('movember_show', { 'id': movember.id }) }}">{{ movember.id }}</a></td>
-                <td>{{ movember.nom }}</td>
-                <td>{{ movember.prenom }}</td>
-                <td>{{ movember.codepost }}</td>
-                <td>{{ movember.ville }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('movember_show', { 'id': movember.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('movember_edit', { 'id': movember.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% for movember in movembers %}
 
-    <ul>
-        <li>
-            <a href="{{ path('movember_new') }}">Create a new movember</a>
-        </li>
-    </ul>
+        <main>
+            <div class="col-xs-12" id="membre">
+                <div class="nom-membre">
+                    <p>{{ movember.nom }} / {{ movember.ville }}</p>
+                </div>
+                <div>
+                    <img src="img/tom-seleck.jpg" class="rounded mx-auto d-block" alt="...">
+                </div>
+                <div class="row">
+                    <button type="submit" style="border: 0; background: transparent">
+                        <img src="img/share.svg" width="30" height="30" alt="submit" />
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea">Commentaires</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <div id="map" style="text-align: center">
+                <img src="img/google-map.png" class="rounded mx-auto d-block">
+            </div>
+
+
+        </main>
+
+    {% endfor %}
+
 {% endblock %}
+

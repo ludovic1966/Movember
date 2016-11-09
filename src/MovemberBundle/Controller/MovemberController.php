@@ -22,7 +22,7 @@ class MovemberController extends Controller
 
         $movembers = $em->getRepository('MovemberBundle:Movember')->findAll();
 
-        return $this->render('movember/index.html.twig', array(
+        return $this->render('MovemberBundle:movember:index.html.twig', array(
             'movembers' => $movembers,
         ));
     }
@@ -45,7 +45,7 @@ class MovemberController extends Controller
             return $this->redirectToRoute('movember_show', array('id' => $movember->getId()));
         }
 
-        return $this->render('movember/new.html.twig', array(
+        return $this->render('MovemberBundle:movember:new.html.twig', array(
             'movember' => $movember,
             'form' => $form->createView(),
         ));
@@ -59,7 +59,7 @@ class MovemberController extends Controller
     {
         $deleteForm = $this->createDeleteForm($movember);
 
-        return $this->render('movember/show.html.twig', array(
+        return $this->render('MovemberBundle:movember:show.html.twig', array(
             'movember' => $movember,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +81,7 @@ class MovemberController extends Controller
             return $this->redirectToRoute('movember_edit', array('id' => $movember->getId()));
         }
 
-        return $this->render('movember/edit.html.twig', array(
+        return $this->render('MovemberBundle:movember:edit.html.twig', array(
             'movember' => $movember,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
