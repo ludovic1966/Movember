@@ -241,15 +241,4 @@ class Movember
     {
         return $this->lgt;
     }
-    /**
-     * @var string
-     */
-    private $lati;
-
-    /**
-     * @var string
-     */
-    private $longt;
-
-
 }

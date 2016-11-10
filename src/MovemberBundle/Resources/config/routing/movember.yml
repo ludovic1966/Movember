@@ -22,3 +22,7 @@ movember_delete:
     path:     /{id}/delete
     defaults: { _controller: "MovemberBundle:Movember:delete" }
     methods:  DELETE
+
+movember_geocod:
+    path:     /
+    defaults: { _controller: "MovemberBundle:Movember:geocod" }

@@ -21,4 +21,11 @@ MovemberBundle\Entity\Movember:
         ville:
             type: string
             length: 255
+        lati:
+            type: string
+            length: 255
+        longt:
+            type: string
+            length: 255
+
     lifecycleCallbacks: {  }

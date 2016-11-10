@@ -5,9 +5,9 @@ namespace MovemberBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Movember
+ * formulaire
  */
-class Movember
+class formulaire
 {
     /**
      * @var int
@@ -34,6 +34,16 @@ class Movember
      */
     private $ville;
 
+    /**
+     * @var string
+     */
+    private $email;
+
+    /**
+     * @var string
+     */
+    private $password;
+
 
     /**
      * Get id
@@ -49,7 +59,7 @@ class Movember
      * Set nom
      *
      * @param string $nom
-     * @return Movember
+     * @return formulaire
      */
     public function setNom($nom)
     {
@@ -72,7 +82,7 @@ class Movember
      * Set prenom
      *
      * @param string $prenom
-     * @return Movember
+     * @return formulaire
      */
     public function setPrenom($prenom)
     {
@@ -95,7 +105,7 @@ class Movember
      * Set codepost
      *
      * @param string $codepost
-     * @return Movember
+     * @return formulaire
      */
     public function setCodepost($codepost)
     {
@@ -118,7 +128,7 @@ class Movember
      * Set ville
      *
      * @param string $ville
-     * @return Movember
+     * @return formulaire
      */
     public function setVille($ville)
     {
@@ -137,119 +147,49 @@ class Movember
         return $this->ville;
     }
 
-    /****************************************************/
     /**
-     * Set lati
+     * Set email
      *
-     * @param string $lati
-     * @return Movember
+     * @param string $email
+     * @return formulaire
      */
-    public function setlati($lati)
+    public function setEmail($email)
     {
-        $this->lati = $lati;
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * Get lati
-     *
-     * @return string
-     */
-    public function getlati()
-    {
-        return $this->lati;
-    }
-
-    /**
-     * Set longt
-     *
-     * @param string $longt
-     * @return Movember
-     */
-    public function setlongt($longt)
-    {
-        $this->longt = $longt;
-
-        return $this;
-    }
-
-    /**
-     * Get longt
-     *
-     * @return string
-     */
-    public function getlongt()
-    {
-        return $this->longt;
-    }
-
-
-    /**
-     * @var string
-     */
-    private $lat;
-
-    /**
-     * @var string
-     */
-    private $lgt;
-
-
-    /**
-     * Set lat
-     *
-     * @param string $lat
-     * @return Movember
-     */
-    public function setLat($lat)
-    {
-        $this->lat = $lat;
-
-        return $this;
-    }
-
-    /**
-     * Get lat
+     * Get email
      *
      * @return string 
      */
-    public function getLat()
+    public function getEmail()
     {
-        return $this->lat;
+        return $this->email;
     }
 
     /**
-     * Set lgt
+     * Set password
      *
-     * @param string $lgt
-     * @return Movember
+     * @param string $password
+     * @return formulaire
      */
-    public function setLgt($lgt)
+    public function setPassword($password)
     {
-        $this->lgt = $lgt;
+        $this->password = $password;
 
         return $this;
     }
 
     /**
-     * Get lgt
+     * Get password
      *
      * @return string 
      */
-    public function getLgt()
+    public function getPassword()
     {
-        return $this->lgt;
+        return $this->password;
     }
-    /**
-     * @var string
-     */
-    private $lati;
-
-    /**
-     * @var string
-     */
-    private $longt;
-
-
 }

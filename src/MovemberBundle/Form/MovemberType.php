@@ -13,7 +13,13 @@ class MovemberType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('prenom')->add('codepost')->add('ville')        ;
+        $builder
+            ->add('nom')
+            ->add('prenom')
+            ->add('codepost')
+            ->add('ville')
+            ->add('lati')
+            ->add('longt');
     }
     
     /**
@@ -34,5 +40,5 @@ class MovemberType extends AbstractType
         return 'movemberbundle_movember';
     }
 
-
+    
 }
