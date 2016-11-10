@@ -123,18 +123,5 @@ class MovemberController extends Controller
     }
 
     /*function comment*/
-    public function ajoutercommentaireAction(){
-        $commentaire=new Commentaire();
-        $form=$this->createForm(new CommentaireType,$commentaire);
-        $req=$this->get('request');
-        if($req->getMethod() == 'POST'){
-            $form->bind($req);
-            if($form->isValid()){
-                $em=$this->getDoctrine()->getManager();
-                $em->persist($commentaire);
-                $em->flush();
-                return $this->redirect($this->generateUrl('index'));
-            }}
-
-        return $this->render('MovemberBundle:movember:index.html.twig',array('form'=>$form->createView()));}
+   
 }

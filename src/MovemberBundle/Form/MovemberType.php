@@ -8,17 +8,18 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MovemberType extends AbstractType
 {
-    /**
-     * {@inheritdoc}
-     */
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('prenom')->add('codepost')->add('ville')        ;
+        $builder
+            ->add('nom')
+            ->add('prenom')
+            ->add('codepost')
+            ->add('ville')
+        ;
     }
     
-    /**
-     * {@inheritdoc}
-     */
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
@@ -27,12 +28,16 @@ class MovemberType extends AbstractType
     }
 
     /**
-     * {@inheritdoc}
+     * Returns the name of this type.
+     *
+     * @return string The name of this type
+     *
+     * @deprecated Deprecated since Symfony 2.8, to be removed in Symfony 3.0.
+     *             Use the fully-qualified class name of the type instead.
      */
-    public function getBlockPrefix()
+    public function getName()
     {
-        return 'movemberbundle_movember';
+        return 'movember';
+
     }
-
-
 }
