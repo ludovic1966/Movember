@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Movember</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ formulaire.id }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ formulaire.nom }}</td>
+        </tr>
+        <tr>
+            <th>Prenom</th>
+            <td>{{ formulaire.prenom }}</td>
+        </tr>
+        <tr>
+            <th>Codepost</th>
+            <td>{{ formulaire.codepost }}</td>
+        </tr>
+        <tr>
+            <th>Ville</th>
+            <td>{{ formulaire.ville }}</td>
+        </tr>
+        <tr>
+            <th>email</th>
+            <td>{{ formulaire.email }}</td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td>{{ formulaire.password }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('formulaire_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('formulaire_edit', { 'id': formulaire.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

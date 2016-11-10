@@ -5,3 +5,7 @@ movember_movember:
 movember_homepage:
     path:     /
     defaults: { _controller: MovemberBundle:Default:index }
+
+movember_formulaire:
+    resource: "@MovemberBundle/Resources/config/routing/formulaire.yml"
+    prefix:   /formulaire

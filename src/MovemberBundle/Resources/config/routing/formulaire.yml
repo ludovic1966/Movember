@@ -1,0 +1,24 @@
+formulaire_index:
+    path:     /
+    defaults: { _controller: "MovemberBundle:formulaire:index" }
+    methods:  GET
+
+formulaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "MovemberBundle:formulaire:show" }
+    methods:  GET
+
+formulaire_new:
+    path:     /new
+    defaults: { _controller: "MovemberBundle:formulaire:new" }
+    methods:  [GET, POST]
+
+formulaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MovemberBundle:formulaire:edit" }
+    methods:  [GET, POST]
+
+formulaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MovemberBundle:formulaire:delete" }
+    methods:  DELETE
