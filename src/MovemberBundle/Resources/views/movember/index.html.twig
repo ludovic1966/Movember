@@ -10,12 +10,10 @@
                     <p>{{ movember.nom }} / {{ movember.ville }}</p>
                 </div>
                 <div>
-                    <img src="img/tom-seleck.jpg" class="rounded mx-auto d-block" alt="...">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrYkF_ppCGE7yKKqFwdy3hNplWajzBquw7rEfLY1PNB2CyX74"  alt="...">
                 </div>
                 <div class="row">
-                    <button type="submit" style="border: 0; background: transparent">
-                        <img src="img/share.svg" width="30" height="30" alt="submit" />
-                    </button>
+                    <button type="button" class="btn.btn-primary">Partager</button>
                 </div>
                 <div class="rating">
                     <a href="#5" title="Donner 5 étoiles">&#9733;</a>
@@ -29,9 +27,30 @@
                 <label for="exampleTextarea">Commentaires</label>
                 <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
             </div>
-            <div id="map" style="text-align: center">
-                <img src="img/google-map.png" class="rounded mx-auto d-block">
+
+            <div class="col-xs-12" id="membre">
+                <div class="nom-membre">
+                    <p>{{ movember.nom }} / {{ movember.ville }}</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrYkF_ppCGE7yKKqFwdy3hNplWajzBquw7rEfLY1PNB2CyX74"  alt="...">
+                </div>
+                <div class="row">
+                    <button type="button" class="btn.btn-primary">Partager</button>
+                </div>
+                <div class="rating">
+                    <a href="#5" title="Donner 5 étoiles">&#9733;</a>
+                    <a href="#4" title="Donner 4 étoiles">&#9733;</a>
+                    <a href="#3" title="Donner 3 étoiles">&#9733;</a>
+                    <a href="#2" title="Donner 2 étoiles">&#9733;</a>
+                    <a href="#1" title="Donner 1 étoile">&#9733;</a>
+                </div>
             </div>
+            <div class="form-group">
+                <label for="exampleTextarea">Commentaires</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            
         </main>
 
     {% endfor %}

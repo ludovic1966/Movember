@@ -25,3 +25,8 @@
     color: orange;
     cursor: pointer;
 }
+
+.btn.btn-primary {
+    color: #999999;
+}
+
